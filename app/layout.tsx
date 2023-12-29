@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 import { Urbanist } from 'next/font/google'
 import './globals.css'
+import Footer from "@/components/footer"
+import Navbar from "@/components/navbar"
 
-const inter = Urbanist({ subsets: ['latin'] })
+const font = Urbanist({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Store',
+  title: 'Ecommerce-Store',
   description: 'Store',
 }
 
@@ -16,7 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={font.className}>
+        <Navbar/>
+        {children}
+        <Footer/>
+      </body>
     </html>
   )
 }
