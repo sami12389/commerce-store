@@ -1,16 +1,16 @@
-import React from 'react'
 import getBillboard from '@/actions/getBillboard'
 import getProducts from '@/actions/getProducts'
 import Container from '@/components/ui/container'
 import Billboard from '@/components/billboard'
-import ProductList from '@/components/productList'
+import ProductList from "@/components/productList"
+
 
 export const revalidate = 0
 
 const HomePage = async() => {
-  const products  = await getProducts({isFeatured: true})
-  const billboard = await getBillboard('d6c9ff8c-4d9a-4638-9070-cfc36c3ff62f')
-  return (
+  const products = await getProducts({isFeatured: true})
+  const billboard = await getBillboard("781e40a5-edc5-4f72-a5ad-1afdc9bac91f")
+  return(
     <Container>
       <div className = "space-y-10 pb-10">
         <Billboard data = {billboard}/>

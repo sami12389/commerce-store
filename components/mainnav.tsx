@@ -27,9 +27,7 @@ const MainNav: React.FC<MainNavProps> = ({
             className = {cn("text-sm font-medium transition-colors hover: text-black",
             route.active ? "text-black" : "text-neutral-500")}
             >
-                <a className = {`text-sm font-medium ${route.active ? "text-gray-900" : "text-gray-500 hover:text-gray-900 "}`}>
-                    {route.label}
-                </a>
+               {route.label}
             </Link>
         ))}
     </nav>
